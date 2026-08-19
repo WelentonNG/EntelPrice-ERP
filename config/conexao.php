@@ -1,12 +1,12 @@
 <?php 
+//TODO: Não esta funcionando a config.php não tá pegando as variaveis 
+//require_once 'config.php';
 
-require_once 'config.php';
-
-define('DB_HOST', $db_host);
-define('DB_NAME', $db_name);
-define('DB_USER', $db_user);
-define('DB_PASS', $db_pass);
-define('DB_PORT', $db_port);
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'EntelPrice_ERP');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_PORT', 3306);
 
 try {
 

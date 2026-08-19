@@ -1,7 +1,7 @@
 <?php
 
 $envChoice = $_SESSION['environment'] ?? 'PROD';
-$envPath = __DIR__ . '../.env';
+$envPath = __DIR__ . '/.env';
 
 if (!file_exists($envPath)) {
     die("Arquivo .env não encontrado em $envPath");
@@ -28,7 +28,6 @@ foreach ($lines as $line) {
     putenv(sprintf('%s=%s', trim($name), trim($value)));
 }
 
-
 if ($envChoice == 'PROD') {
 
     $host = getenv('DB_HOST');
@@ -39,8 +38,6 @@ if ($envChoice == 'PROD') {
     $current_env = 'PROD';
 
 }else{};
-
-
 // TRANSFORMA TODAS AS VARIÁVEIS ACIMA EM GLOBAIS
 $GLOBALS = array_merge($GLOBALS, get_defined_vars());
 
