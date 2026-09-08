@@ -1,7 +1,7 @@
 <?php
 
 $envChoice = $_SESSION['environment'] ?? 'PROD';
-$envPath = __DIR__ . '/.env';
+$envPath = '../.env';
 
 if (!file_exists($envPath)) {
     die("Arquivo .env não encontrado em $envPath");
