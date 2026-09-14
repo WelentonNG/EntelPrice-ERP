@@ -1,4 +1,3 @@
 # variáveis de ambiente
 .env
-.env.*
-!.env.example
+DATABASE.sql
